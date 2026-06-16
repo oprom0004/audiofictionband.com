@@ -1,0 +1,346 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+"use client";
+
+import React, { useState } from "react";
+import { POWER_MODELS } from "../data";
+import { ShieldAlert, Globe, Store } from "lucide-react";
+import { BUY_ONLINE_COPYWRITE, COMMON_COPYWRITE } from "../data/copywriting";
+
+// Mock of realistic inventory data across key regional warehouse hubs
+const REGIONAL_INVENTORY = [
+  {
+    modelId: "eTM-8001",
+    stocks: {
+      domestic: { status: "In Stock", qty: 24 },
+      usa: { status: "In Stock", qty: 8 },
+      europe: { status: "Low Stock", qty: 3 },
+      singapore: { status: "In Stock", qty: 15 }
+    }
+  },
+  {
+    modelId: "eTM-8001C",
+    stocks: {
+      domestic: { status: "In Stock", qty: 12 },
+      usa: { status: "In Stock", qty: 4 },
+      europe: { status: "Low Stock", qty: 2 },
+      singapore: { status: "In Stock", qty: 6 }
+    }
+  },
+  {
+    modelId: "eTM-8002",
+    stocks: {
+      domestic: { status: "In Stock", qty: 18 },
+      usa: { status: "In Stock", qty: 11 },
+      europe: { status: "In Stock", qty: 7 },
+      singapore: { status: "In Stock", qty: 12 }
+    }
+  },
+  {
+    modelId: "eTM-8002C",
+    stocks: {
+      domestic: { status: "In Stock", qty: 9 },
+      usa: { status: "In Stock", qty: 5 },
+      europe: { status: "Low Stock", qty: 1 },
+      singapore: { status: "In Stock", qty: 8 }
+    }
+  },
+  {
+    modelId: "eTM-8003",
+    stocks: {
+      domestic: { status: "In Stock", qty: 14 },
+      usa: { status: "Low Stock", qty: 2 },
+      europe: { status: "Backorder", qty: 0, leadTime: "3 Weeks" },
+      singapore: { status: "In Stock", qty: 9 }
+    }
+  },
+  {
+    modelId: "eTM-8003C",
+    stocks: {
+      domestic: { status: "In Stock", qty: 8 },
+      usa: { status: "Low Stock", qty: 1 },
+      europe: { status: "Backorder", qty: 0, leadTime: "3 Weeks" },
+      singapore: { status: "In Stock", qty: 4 }
+    }
+  },
+  {
+    modelId: "eTM-8005",
+    stocks: {
+      domestic: { status: "In Stock", qty: 32 },
+      usa: { status: "In Stock", qty: 14 },
+      europe: { status: "In Stock", qty: 9 },
+      singapore: { status: "In Stock", qty: 22 }
+    }
+  },
+  {
+    modelId: "eTM-8005C",
+    stocks: {
+      domestic: { status: "In Stock", qty: 15 },
+      usa: { status: "In Stock", qty: 7 },
+      europe: { status: "Low Stock", qty: 2 },
+      singapore: { status: "In Stock", qty: 10 }
+    }
+  },
+  {
+    modelId: "eTM-8006",
+    stocks: {
+      domestic: { status: "In Stock", qty: 11 },
+      usa: { status: "Low Stock", qty: 1 },
+      europe: { status: "Low Stock", qty: 2 },
+      singapore: { status: "Low Stock", qty: 3 }
+    }
+  },
+  {
+    modelId: "eTM-8006C",
+    stocks: {
+      domestic: { status: "In Stock", qty: 5 },
+      usa: { status: "Backorder", qty: 0, leadTime: "4 Weeks" },
+      europe: { status: "Low Stock", qty: 1 },
+      singapore: { status: "Low Stock", qty: 2 }
+    }
+  }
+];
+
+export default function BuyOnlineView() {
+  const [selectedRegion, setSelectedRegion] = useState<"all" | "usa" | "europe" | "singapore" | "domestic">("all");
+
+  const getRegionBadge = (status: string, qty: number, leadTime?: string) => {
+    if (status === "In Stock") {
+      return (
+        <div className="flex items-center gap-1.5">
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          <span className="text-emerald-400 font-medium">{qty} Units Available</span>
+        </div>
+      );
+    }
+    if (status === "Low Stock") {
+      return (
+        <div className="flex items-center gap-1.5">
+          <span className="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+          <span className="text-amber-400 font-medium">Low Stock ({qty} left)</span>
+        </div>
+      );
+    }
+    return (
+      <div className="flex flex-col">
+        <span className="text-rose-400 font-semibold uppercase text-[9px] tracking-wider">Backorder</span>
+        <span className="text-gray-500 text-[10px]">Lead time: {leadTime}</span>
+      </div>
+    );
+  };
+
+  return (
+    <div id="buy-online-view" className="space-y-10">
+      
+      {/* Dynamic Introduction Header */}
+      <section id="online-buy-intro" className="space-y-4">
+        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20">
+          <Store size={13} className="text-cyan-400" />
+          <span className="text-xs font-mono font-bold text-cyan-400 uppercase tracking-wider">
+            {BUY_ONLINE_COPYWRITE.badge}
+          </span>
+        </div>
+        <h1 className="text-3xl font-sans font-bold text-gray-100 tracking-tight">
+          {BUY_ONLINE_COPYWRITE.title}
+        </h1>
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pt-2 pb-6 border-b border-gray-800">
+          <p className="text-gray-400 text-sm leading-relaxed max-w-2xl text-justify font-sans" dangerouslySetInnerHTML={{ __html: BUY_ONLINE_COPYWRITE.intro }} />
+          <button
+            type="button"
+            onClick={() => { window.location.href = COMMON_COPYWRITE.officialStoreUrl; }}
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-cyan-500 hover:bg-cyan-400 text-gray-950 font-extrabold uppercase text-xs tracking-wider rounded-lg transition-all shadow-lg shadow-cyan-500/15 hover:scale-[1.02] shrink-0 text-center"
+          >
+            {COMMON_COPYWRITE.storeBtnText}
+          </button>
+        </div>
+      </section>
+
+      {/* Unified Store Action Card */}
+      <section id="procurement-tracks">
+        <div className="p-6 bg-gradient-to-b from-[#141417] to-[#101012] border border-gray-800 rounded-xl space-y-4 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-48 h-48 bg-cyan-500/[0.02] rounded-full blur-3xl pointer-events-none"></div>
+          
+          <div className="flex items-center justify-between">
+            <span className="text-[10px] font-mono tracking-wider text-cyan-400 uppercase font-bold bg-cyan-500/10 px-2.5 py-0.5 rounded-full border border-cyan-500/20">
+              Retail & Integrator Direct Checkout
+            </span>
+            <span className="text-xs font-mono text-emerald-400 flex items-center gap-1 bg-emerald-500/5 border border-emerald-500/15 px-2 py-0.5 rounded">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>
+              SSL SECURE PORTAL
+            </span>
+          </div>
+
+          <h3 className="text-lg font-sans font-extrabold text-gray-100">
+            Official E-Commerce Store Checkout
+          </h3>
+          <p className="text-xs text-gray-400 leading-relaxed">
+            Verify actual end-user pricing, check active factory promotions, calculate shipping rates automatically, and complete transactions securely via credit/debit or company cards directly on our official store domain.
+          </p>
+
+          <div className="p-4 bg-black/45 border border-gray-900 rounded-lg max-w-xl">
+            <span className="text-[10px] uppercase font-mono text-gray-500 block mb-1">Official Checkout Channel:</span>
+            <div className="text-xs text-gray-300 font-mono flex items-center justify-between">
+              <span className="font-semibold text-cyan-400">variabledcpowersupply.com</span>
+              <span className="text-emerald-400">Online & Active</span>
+            </div>
+          </div>
+
+          <div className="pt-2 max-w-sm">
+            <button
+              type="button"
+              onClick={() => { window.location.href = COMMON_COPYWRITE.officialStoreUrl; }}
+              className="w-full text-center py-2.5 bg-cyan-500 hover:bg-cyan-400 text-gray-950 font-bold rounded-lg text-xs tracking-wider uppercase transition flex items-center justify-center gap-1.5 select-none shadow-lg shadow-cyan-500/5 hover:scale-[1.01] cursor-pointer"
+            >
+              Visit E-Commerce Store Checkout ↗
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Global Stock Finder */}
+      <section id="stock-finder" className="bg-[#121214] border border-gray-800 rounded-xl p-6 space-y-6">
+        
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gray-800 pb-4">
+          <div className="space-y-1">
+            <h3 className="text-base font-sans font-bold text-gray-200 flex items-center gap-2">
+              <Globe size={18} className="text-cyan-400" />
+              {BUY_ONLINE_COPYWRITE.stockSearchTitle}
+            </h3>
+            <p className="text-xs text-gray-500">
+              {BUY_ONLINE_COPYWRITE.stockSearchSub}
+            </p>
+          </div>
+
+          {/* Filtering buttons */}
+          <div className="flex flex-wrap gap-1.5 font-mono text-[9px] uppercase font-bold shrink-0">
+            {(["all", "domestic", "usa", "europe", "singapore"] as const).map(reg => (
+              <button
+                key={reg}
+                type="button"
+                onClick={() => setSelectedRegion(reg)}
+                className={`px-2.5 py-1 rounded transition-colors cursor-pointer ${
+                  selectedRegion === reg
+                    ? "bg-cyan-500 text-gray-950 font-extrabold"
+                    : "bg-[#18181b] hover:bg-gray-800 text-gray-400 border border-gray-800/80"
+                }`}
+              >
+                {reg === "all" ? "View All Stocks" : reg === "domestic" ? "Factory Root" : reg.toUpperCase() + " Hub"}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Inventory Matrix Table */}
+        <div className="overflow-x-auto">
+          <table className="w-full text-left text-xs text-gray-400 border-collapse">
+            <thead>
+              <tr className="border-b border-gray-800 text-[10px] font-mono text-gray-500 uppercase tracking-wider">
+                <th className="py-3 px-4 font-bold">Model SKU</th>
+                <th className="py-3 px-4 font-bold">Specs Summary</th>
+                {selectedRegion === "all" && (
+                  <>
+                    <th className="py-3 px-4 font-bold">Factory Depot</th>
+                    <th className="py-3 px-4 font-bold">USA (Chicago)</th>
+                    <th className="py-3 px-4 font-bold">EU (Munich)</th>
+                    <th className="py-3 px-4 font-bold">APAC (Singapore)</th>
+                  </>
+                )}
+                {selectedRegion === "domestic" && <th className="py-3 px-4 font-bold">Factory Depot Stock</th>}
+                {selectedRegion === "usa" && <th className="py-3 px-4 font-bold">USA Chicago Depot Stock</th>}
+                {selectedRegion === "europe" && <th className="py-3 px-4 font-bold">EU Munich Depot Stock</th>}
+                {selectedRegion === "singapore" && <th className="py-3 px-4 font-bold">APAC Singapore Depot Stock</th>}
+                <th className="py-3 px-4 text-right font-bold">Acquisition Support</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-800">
+              {POWER_MODELS.map(m => {
+                const inv = REGIONAL_INVENTORY.find(item => item.modelId === m.id)!;
+                return (
+                  <tr key={m.id} className="hover:bg-gray-800/10 transition-colors">
+                    <td className="py-4 px-4 font-mono font-bold text-gray-200">
+                      {m.id}
+                    </td>
+                    <td className="py-4 px-4">
+                      <div className="text-gray-300 font-sans font-medium text-[11px]">800V DC / {m.current} Amps</div>
+                      <div className="text-[10px] text-gray-500 font-mono mt-0.5 leading-none">{m.rackSize} Rack</div>
+                    </td>
+
+                    {selectedRegion === "all" && (
+                      <>
+                        <td className="py-4 px-4 whitespace-nowrap">
+                          {getRegionBadge(inv.stocks.domestic.status, inv.stocks.domestic.qty)}
+                        </td>
+                        <td className="py-4 px-4 whitespace-nowrap">
+                          {getRegionBadge(inv.stocks.usa.status, inv.stocks.usa.qty)}
+                        </td>
+                        <td className="py-4 px-4 whitespace-nowrap">
+                          {getRegionBadge(inv.stocks.europe.status, inv.stocks.europe.qty, "europe" in inv.stocks.europe ? undefined : "3 Weeks")}
+                        </td>
+                        <td className="py-4 px-4 whitespace-nowrap">
+                          {getRegionBadge(inv.stocks.singapore.status, inv.stocks.singapore.qty)}
+                        </td>
+                      </>
+                    )}
+
+                    {selectedRegion === "domestic" && (
+                      <td className="py-4 px-4 whitespace-nowrap">
+                        {getRegionBadge(inv.stocks.domestic.status, inv.stocks.domestic.qty)}
+                      </td>
+                    )}
+
+                    {selectedRegion === "usa" && (
+                      <td className="py-4 px-4 whitespace-nowrap">
+                        {getRegionBadge(inv.stocks.usa.status, inv.stocks.usa.qty)}
+                      </td>
+                    )}
+
+                    {selectedRegion === "europe" && (
+                      <td className="py-4 px-4 whitespace-nowrap">
+                        {getRegionBadge(
+                          inv.stocks.europe.status, 
+                          inv.stocks.europe.qty, 
+                          !("qty" in inv.stocks.europe) || inv.stocks.europe.qty === 0 ? "3 Weeks" : undefined
+                        )}
+                      </td>
+                    )}
+
+                    {selectedRegion === "singapore" && (
+                      <td className="py-4 px-4 whitespace-nowrap">
+                        {getRegionBadge(inv.stocks.singapore.status, inv.stocks.singapore.qty)}
+                      </td>
+                    )}
+
+                     <td className="py-4 px-4 text-right">
+                      <div className="flex justify-end">
+                        <button 
+                          type="button"
+                          onClick={() => { window.location.href = m.buyUrl || COMMON_COPYWRITE.officialStoreUrl; }}
+                          className="px-2.5 py-1 text-[10px] font-extrabold bg-cyan-500 hover:bg-cyan-400 text-gray-950 uppercase rounded flex items-center gap-0.5 border border-cyan-500/20 select-none font-sans cursor-pointer inline-flex items-center hover:scale-105 active:scale-95 transition"
+                        >
+                          Checkout Store ↗
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Global Delivery Note */}
+        <div id="logistics-disclosure" className="p-4 bg-gray-950/45 border border-gray-800 rounded-lg flex items-start gap-3">
+          <ShieldAlert size={16} className="text-cyan-400 shrink-0 mt-0.5" />
+          <p className="text-[11px] text-gray-400 leading-relaxed font-sans">
+            <strong>Logistics Transit & Compliance:</strong> All shipments of ETM 800V-series variable DC power units are dispatched securely via heavy-duty flight casing or shock-proof wood crates. Transit from our regional hubs is completed efficiently. {BUY_ONLINE_COPYWRITE.procurementCol1} {BUY_ONLINE_COPYWRITE.procurementCol2}
+          </p>
+        </div>
+
+      </section>
+
+    </div>
+  );
+}

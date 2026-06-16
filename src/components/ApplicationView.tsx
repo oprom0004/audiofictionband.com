@@ -1,0 +1,245 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+"use client";
+
+import React, { useState } from "react";
+import Link from "next/link";
+import { Zap, BatteryCharging, Sun, FlaskConical, Cpu, ShieldCheck } from "lucide-react";
+import { APPLICATION_COPYWRITE, COMMON_COPYWRITE } from "../data/copywriting";
+
+export default function ApplicationView() {
+  const [activeCaseId, setActiveCaseId] = useState<string>("ev-charging-battery");
+  const [targetLoadResistance, setTargetLoadResistance] = useState<number>(200);
+
+  // Math equations: at 800V, Power = V^2 / R = 640000 / R
+  const calculatedPowerWatts = Math.min(6000, Math.round(640000 / targetLoadResistance));
+  const calculatedAmps = parseFloat((800 / targetLoadResistance).toFixed(2));
+
+  // Determine which model matches
+  let suggestedModel = "eTM-8001";
+  if (calculatedAmps > 5.0) suggestedModel = "eTM-8006";
+  else if (calculatedAmps > 3.0) suggestedModel = "eTM-8005";
+  else if (calculatedAmps > 2.0) suggestedModel = "eTM-8003";
+  else if (calculatedAmps > 1.0) suggestedModel = "eTM-8002";
+
+  const getIcon = (id: string) => {
+    switch (id) {
+      case "ev-charging-battery": return <BatteryCharging size={18} />;
+      case "solar-photovoltaics": return <Sun size={18} />;
+      case "lab-materials": return <FlaskConical size={18} />;
+      default: return <Cpu size={18} />;
+    }
+  };
+
+  const activeCopyCase = APPLICATION_COPYWRITE.cases.find(c => c.id === activeCaseId) || APPLICATION_COPYWRITE.cases[0];
+
+  return (
+    <div id="application-view" className="space-y-10">
+      
+      {/* Narrative block */}
+      <section id="applications-editorial-header" className="space-y-4">
+        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20">
+          <Zap size={13} className="text-cyan-400" />
+          <span className="text-xs font-mono font-medium text-cyan-400 uppercase tracking-wider font-semibold">
+            {APPLICATION_COPYWRITE.badge}
+          </span>
+        </div>
+        <h1 className="text-3xl font-sans font-bold text-gray-100 tracking-tight">
+          {APPLICATION_COPYWRITE.title}
+        </h1>
+        <p className="text-gray-400 text-sm leading-relaxed max-w-4xl" dangerouslySetInnerHTML={{ __html: APPLICATION_COPYWRITE.intro }} />
+      </section>
+
+      {/* Case studies tabbed layout browser */}
+      <section id="case-studies-browser" className="grid grid-cols-1 md:grid-cols-12 gap-8">
+        
+        {/* Left Side Tab Buttons */}
+        <div className="md:col-span-4 space-y-2">
+          <span className="block text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-2">Configure Case Analysis:</span>
+          {APPLICATION_COPYWRITE.cases.map(c => (
+            <button
+              key={c.id}
+              id={`case-tab-${c.id}`}
+              type="button"
+              onClick={() => setActiveCaseId(c.id)}
+              className={`w-full p-4 text-left border rounded-xl transition cursor-pointer flex items-center gap-3 ${
+                activeCaseId === c.id
+                  ? "bg-cyan-500/10 border-cyan-500 text-gray-100"
+                  : "bg-[#121214] border-gray-800 text-gray-450 hover:border-gray-700 hover:text-gray-300"
+              }`}
+            >
+              <div className="text-cyan-400 shrink-0">
+                {getIcon(c.id)}
+              </div>
+              <div className="font-sans">
+                <span className="block text-xs font-semibold">{c.title.split(" & ")[0].split(" for ")[0]}</span>
+                <span className="block text-[9px] text-gray-500 font-mono tracking-wider">{c.subtitle}</span>
+              </div>
+            </button>
+          ))}
+        </div>
+
+        {/* Right Side Tab Viewer pane */}
+        <div className="md:col-span-8 bg-[#121214] border border-gray-800 rounded-xl p-6 space-y-4 font-sans text-xs">
+          <span className="text-[10px] font-mono text-cyan-400 uppercase tracking-widest block">{activeCopyCase.subtitle}</span>
+          <h3 className="text-lg font-sans font-bold text-gray-150">{activeCopyCase.title}</h3>
+          
+          <div className="space-y-3 py-2 text-gray-400 leading-relaxed text-[11.5px]">
+            <div>
+              <strong className="text-gray-200 block mb-1">Testing Challenges:</strong>
+              <p>{activeCopyCase.problem}</p>
+            </div>
+            <div>
+              <strong className="text-gray-200 block mb-1">{COMMON_COPYWRITE.brandName} Solutions:</strong>
+              <p>{activeCopyCase.solution}</p>
+            </div>
+            <div className="p-3 bg-[#161619] border border-gray-800 rounded-lg">
+              <strong className="text-cyan-400 block mb-1 font-mono uppercase text-[10px]">{APPLICATION_COPYWRITE.demandedLabel}</strong>
+              <p className="text-gray-350 font-mono text-[11px]">{activeCopyCase.specDemanded}</p>
+            </div>
+          </div>
+
+          <div className="pt-2 border-t border-gray-800 flex gap-2">
+            <Link
+              href="/800v-dc-power-pricing-guide"
+              className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-400 hover:to-cyan-550 text-gray-950 font-extrabold uppercase text-[11px] rounded transition cursor-pointer inline-flex items-center"
+            >
+              Configure {suggestedModel} specs & prices ➔
+            </Link>
+          </div>
+        </div>
+
+      </section>
+
+      {/* INTERACTIVE FORMULA SOLVER & RECOMMENDED SKUS */}
+      <section id="load-estimator-tool" className="bg-[#121214] border border-gray-800 p-6 rounded-xl space-y-6">
+        <div>
+          <h3 className="text-base font-sans font-semibold text-gray-200 mb-2 flex items-center gap-2">
+            <ShieldCheck className="text-cyan-400" size={18} />
+            800V Ohm Power & Cable Gauge Estimator
+          </h3>
+          <p className="text-xs text-gray-400">
+            For hardware simulation testing, input the minimum electrical load resistance of your device-under-test to estimate peak continuous wattage requirements.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-xs">
+          
+          {/* Slider input */}
+          <div className="space-y-4">
+            <div className="flex justify-between items-center font-mono">
+              <span className="text-gray-400 uppercase">Device Under Test Resistive Load:</span>
+              <span className="text-cyan-400 font-bold text-sm">{targetLoadResistance} Ohms</span>
+            </div>
+            <input
+              id="ohms-slider"
+              type="range"
+              min={134}
+              max={1500}
+              value={targetLoadResistance}
+              onChange={e => setTargetLoadResistance(parseInt(e.target.value))}
+              className="w-full h-1.5 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-cyan-500"
+            />
+            <div className="flex justify-between text-[9px] text-gray-500 font-mono">
+              <span>134 Ohms (Full 4.8 kW)</span>
+              <span>800 Ohms</span>
+              <span>1500 Ohms (low current)</span>
+            </div>
+          </div>
+
+          {/* Formulas Output summary */}
+          <div className="bg-[#18181b] border border-gray-800 rounded-lg p-4 space-y-2 font-mono text-[11px]">
+            <div className="flex justify-between text-gray-450 border-b border-gray-800 pb-1.5 mb-1.5 uppercase text-[9px] tracking-wider font-bold font-semibold font-sans">
+              <span>Analytical Calculation</span>
+              <span>Calculated Value</span>
+            </div>
+            <div className="flex justify-between text-gray-400">
+              <span>Target Standard Voltage:</span>
+              <span className="text-gray-200">800.00 Volts</span>
+            </div>
+            <div className="flex justify-between text-gray-450">
+              <span>Calculated Current Draw:</span>
+              <span className="text-cyan-400 font-mono font-bold">{calculatedAmps} Amps</span>
+            </div>
+            <div className="flex justify-between text-gray-450">
+              <span>Active Peak Thermal Output:</span>
+              <span className="text-cyan-400 font-bold">{calculatedPowerWatts.toLocaleString()} Watts ({(calculatedPowerWatts/1000).toFixed(2)} kW)</span>
+            </div>
+            
+            <div className="flex justify-between text-gray-400 pt-1 border-t border-gray-800">
+              <span>Recommended {COMMON_COPYWRITE.brandName} SKU:</span>
+              <span className="text-cyan-400 font-bold">{suggestedModel}</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Complete Application Cases Directory */}
+      <section id="all-cases-directory" className="space-y-6 pt-8 border-t border-gray-800">
+        <div>
+          <h2 className="text-lg font-sans font-bold text-gray-100 flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-cyan-500"></span>
+            Deep-Dive: 800V DC Power Supply Field Implementations
+          </h2>
+          <p className="text-xs text-gray-400 mt-1 max-w-4xl">
+            Read complete engineering breakdowns of high-voltage DC power supply implementations across electric propulsion, solar grid validation, materials research, and heavy industrial automation.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {APPLICATION_COPYWRITE.cases.map(c => (
+            <div key={c.id} className="bg-[#121214] border border-gray-800 rounded-xl p-5 space-y-4">
+              <div className="flex items-center gap-2 pb-3 border-b border-gray-850">
+                <div className="text-cyan-400 shrink-0">
+                  {getIcon(c.id)}
+                </div>
+                <div>
+                  <span className="block text-[9px] font-mono text-gray-500 uppercase tracking-wider">{c.subtitle}</span>
+                  <h3 className="text-xs font-sans font-bold text-gray-200">{c.title}</h3>
+                </div>
+              </div>
+              <div className="space-y-3 text-xs leading-relaxed text-gray-400">
+                <div>
+                  <strong className="text-[11px] text-gray-300 block mb-0.5 font-semibold">Engineering Challenge:</strong>
+                  <p className="text-justify">{c.problem}</p>
+                </div>
+                <div>
+                  <strong className="text-[11px] text-gray-300 block mb-0.5 font-semibold">System Solution:</strong>
+                  <p className="text-justify">{c.solution}</p>
+                </div>
+                <div className="p-3 bg-black/35 border border-gray-900 rounded-lg">
+                  <span className="block uppercase text-[8px] font-mono text-cyan-400 font-bold mb-0.5">{APPLICATION_COPYWRITE.demandedLabel}</span>
+                  <p className="font-mono text-gray-300 text-[10px] leading-normal">{c.specDemanded}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Technical Standards & EEAT Citations Section */}
+      <section id="technical-references" className="bg-[#121214] border border-gray-800 rounded-xl p-5 space-y-4">
+        <div className="flex items-center gap-2 border-b border-gray-800 pb-2">
+          <span className="w-2 h-2 rounded-full bg-cyan-500"></span>
+          <h4 className="text-xs font-mono uppercase text-gray-200 tracking-wider">Technical Standards & Regulatory Citations</h4>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div className="space-y-2 text-gray-400">
+            <p className="leading-relaxed">
+              Industrial applications in photovoltaic grid-ties and electric vehicle charging verification require rigorous safety compliance. Design parameters and performance benchmarks for high-voltage DC conversion are documented by the <a href="https://www.ieee.org" target="_blank" rel="noopener" className="text-cyan-400 hover:underline">IEEE Power Electronics Society Standards</a>, which dictate ripple attenuation and electrical isolation limits.
+            </p>
+          </div>
+          <div className="space-y-2 text-gray-405">
+            <p className="leading-relaxed">
+              For complete dynamic simulation testing specs and solar cell MPPT tracking calculations, consult the official <a href="https://variabledcpowersupply.com/etm-8005-4-kob-0-800v-0-5a-high-power-bench-dc-power-supply-variable-with-4-digits-led-display-encoder-coarse-fine-adjustments-knob-short-circuit-protection/" target="_blank" rel="noopener" className="text-cyan-400 hover:underline font-semibold">eTM-8005 Solar & EV Simulator Spec Sheet</a>. It provides a robust 4.0 kW output with isolated remote sense features.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  );
+}
