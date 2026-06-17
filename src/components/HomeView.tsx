@@ -386,7 +386,7 @@ export default function HomeView({ posts = [] }: HomeViewProps) {
                 className="bg-[#121214] border border-gray-800 hover:border-cyan-500/20 rounded-xl p-5 transition flex flex-col justify-between group h-full space-y-4"
               >
                 <div className="space-y-3">
-                  <div className="flex items-center gap-2 text-[10px] font-mono text-gray-500 uppercase">
+                  <div className="flex items-center gap-2 text-xs font-mono text-gray-400 uppercase">
                     <span>{post.date}</span>
                     <span>•</span>
                     <span>AFB Power Editor</span>
@@ -400,10 +400,10 @@ export default function HomeView({ posts = [] }: HomeViewProps) {
                     {post.summary}
                   </p>
                 </div>
-                <div className="pt-3 border-t border-gray-850 flex justify-between items-center text-[10px] font-mono uppercase">
+                <div className="pt-3 border-t border-gray-850 flex justify-between items-center text-[11px] font-mono uppercase">
                   <div className="flex gap-1.5 overflow-hidden">
                     {post.keywords.slice(0, 1).map((kw, idx) => (
-                      <span key={idx} className="px-1.5 py-0.5 rounded bg-gray-800 text-gray-400 text-[8px] tracking-wide font-bold">
+                      <span key={idx} className="px-1.5 py-0.5 rounded bg-gray-900 border border-gray-800 text-gray-300 text-[10px] tracking-wide font-bold">
                         {kw}
                       </span>
                     ))}

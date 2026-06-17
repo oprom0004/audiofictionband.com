@@ -26,7 +26,15 @@ export function generateStaticParams() {
   if (!fs.existsSync(CONTENT_DIR)) return [{ slug: "_placeholder" }];
   const files = fs.readdirSync(CONTENT_DIR).filter((f) => f.endsWith(".md"));
   if (files.length === 0) return [{ slug: "_placeholder" }];
-  return files.map((file) => ({ slug: file.replace(/\.md$/, "") }));
+
+  const todayStr = new Date().toISOString().split("T")[0];
+  const publishedFiles = files.filter((file) => {
+    const { data } = matter(fs.readFileSync(path.join(CONTENT_DIR, file), "utf-8"));
+    return data.date && data.date <= todayStr;
+  });
+
+  if (publishedFiles.length === 0) return [{ slug: "_placeholder" }];
+  return publishedFiles.map((file) => ({ slug: file.replace(/\.md$/, "") }));
 }
 
 // Generate per-page metadata from frontmatter
@@ -86,6 +94,10 @@ export default async function ArticlePage({ params }: PageParams) {
 
   const fileContent = fs.readFileSync(filePath, "utf-8");
   const { data, content } = matter(fileContent);
+
+  // Return 404 if article date is in the future (scheduled release)
+  const todayStr = new Date().toISOString().split("T")[0];
+  if (data.date && data.date > todayStr) notFound();
 
   const htmlContent = markdownToHtml(content);
 

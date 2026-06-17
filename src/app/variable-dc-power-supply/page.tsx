@@ -55,8 +55,11 @@ function getBlogPosts(): BlogPost[] {
       };
     });
 
-  // Sort by date (newest first)
-  return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  // Sort by date (newest first) and filter out future posts
+  const todayStr = new Date().toISOString().split("T")[0];
+  return posts
+    .filter(post => post.date && post.date <= todayStr)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
 export default function BlogIndexPage() {
@@ -97,7 +100,7 @@ export default function BlogIndexPage() {
               >
                 <div className="space-y-3">
                   {/* Meta Indicators */}
-                  <div className="flex flex-wrap items-center gap-3 text-[10px] font-mono text-gray-500 uppercase">
+                  <div className="flex flex-wrap items-center gap-3 text-xs font-mono text-gray-400 uppercase">
                     <span className="flex items-center gap-1">
                       <Calendar size={11} className="text-cyan-400" />
                       {post.date}
@@ -126,7 +129,7 @@ export default function BlogIndexPage() {
                     {post.keywords.map((kw, idx) => (
                       <span 
                         key={idx}
-                        className="inline-flex items-center gap-0.5 px-2 py-0.5 rounded bg-gray-800 text-[9px] font-mono text-gray-400 uppercase font-semibold"
+                        className="inline-flex items-center gap-0.5 px-2 py-0.5 rounded bg-gray-900 border border-gray-800 text-[11px] font-mono text-gray-300 uppercase font-semibold"
                       >
                         <Tag size={8} />
                         {kw}

@@ -35,15 +35,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const contentDir = path.join(process.cwd(), "content/variable-dc-power-supply");
   if (fs.existsSync(contentDir)) {
     const files = fs.readdirSync(contentDir).filter((f) => f.endsWith(".md"));
+    const todayStr = new Date().toISOString().split("T")[0];
     for (const file of files) {
       const slug = file.replace(/\.md$/, "");
       const { data } = matter(fs.readFileSync(path.join(contentDir, file), "utf-8"));
-      articleEntries.push({
-        url: `${baseUrl}/variable-dc-power-supply/${slug}`,
-        lastModified: data.date ? new Date(data.date) : new Date(),
-        changeFrequency: "monthly",
-        priority: 0.7,
-      });
+      
+      // Only include already published articles in sitemap
+      if (data.date && data.date <= todayStr) {
+        articleEntries.push({
+          url: `${baseUrl}/variable-dc-power-supply/${slug}`,
+          lastModified: data.date ? new Date(data.date) : new Date(),
+          changeFrequency: "monthly",
+          priority: 0.7,
+        });
+      }
     }
   }
 

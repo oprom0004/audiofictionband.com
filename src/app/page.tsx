@@ -46,8 +46,10 @@ function getLatestBlogPosts(): BlogPost[] {
       };
     });
 
-  // Sort by date (newest first) and take the latest 6
+  // Sort by date (newest first), filter out future posts, and take the latest 6
+  const todayStr = new Date().toISOString().split("T")[0];
   return posts
+    .filter(post => post.date && post.date <= todayStr)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 6);
 }
