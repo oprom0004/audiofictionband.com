@@ -7,6 +7,10 @@ on:
   workflow_dispatch:
     # Allow manual trigger from GitHub Actions tab
 
+permissions:
+  contents: write
+  issues: write
+
 jobs:
   generate-content:
     runs-on: ubuntu-latest
@@ -30,6 +34,36 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: node scripts/auto-blog.js
 
+      - name: Parse Generated Article Info
+        id: article_info
+        run: |
+          # Find untracked or modified .md files in the content directory
+          NEW_FILE=$(git status --porcelain content/variable-dc-power-supply/ | grep -E '^\?\?|^ A' | cut -c 4- | grep '\.md$' | head -n 1 || true)
+          if [ -n "$NEW_FILE" ]; then
+            echo "Found new file: $NEW_FILE"
+            TITLE=$(grep '^title:' "$NEW_FILE" | head -n 1 | sed 's/^title:[[:space:]]*//' | sed 's/^"//' | sed 's/"$//' | sed "s/^'//" | sed "s/'$//" || true)
+            DATE=$(grep '^date:' "$NEW_FILE" | head -n 1 | sed 's/^date:[[:space:]]*//' | sed 's/^"//' | sed 's/"$//' || true)
+            SUMMARY=$(grep '^summary:' "$NEW_FILE" | head -n 1 | sed 's/^summary:[[:space:]]*//' | sed 's/^"//' | sed 's/"$//' || true)
+            SLUG=$(basename "$NEW_FILE" .md)
+            
+            echo "status=success" >> $GITHUB_OUTPUT
+            echo "slug=$SLUG" >> $GITHUB_OUTPUT
+            echo "date=$DATE" >> $GITHUB_OUTPUT
+            echo "file=$NEW_FILE" >> $GITHUB_OUTPUT
+            
+            # Using heredocs for title and summary to prevent escaping issues
+            echo "title<<EOF" >> $GITHUB_OUTPUT
+            echo "$TITLE" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+            
+            echo "summary<<EOF" >> $GITHUB_OUTPUT
+            echo "$SUMMARY" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          else
+            echo "No new file found."
+            echo "status=none" >> $GITHUB_OUTPUT
+          fi
+
       - name: Commit and Push New Article
         run: |
           git config --global user.name "github-actions[bot]"
@@ -45,3 +79,166 @@ jobs:
             git push origin main
             echo "Pushed ${ARTICLE_COUNT} new article(s)."
           fi
+
+      - name: Notify on Success
+        if: success() && steps.article_info.outputs.status == 'success'
+        uses: actions/github-script@v7
+        env:
+          ARTICLE_TITLE: ${{ steps.article_info.outputs.title }}
+          ARTICLE_SLUG: ${{ steps.article_info.outputs.slug }}
+          ARTICLE_SUMMARY: ${{ steps.article_info.outputs.summary }}
+          ARTICLE_DATE: ${{ steps.article_info.outputs.date }}
+          ARTICLE_FILE: ${{ steps.article_info.outputs.file }}
+        with:
+          script: |
+            const marker = '<!-- auto-blog-generation-monitor -->';
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            
+            const title = '自动文章生成监控';
+            const today = new Date().toISOString().split('T')[0];
+            
+            const articleTitle = process.env.ARTICLE_TITLE;
+            const articleSlug = process.env.ARTICLE_SLUG;
+            const articleSummary = process.env.ARTICLE_SUMMARY;
+            const articleDate = process.env.ARTICLE_DATE;
+            const articleFile = process.env.ARTICLE_FILE;
+            
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner,
+              repo,
+              state: 'all',
+              per_page: 100,
+            });
+            
+            const existingIssue = issues.find(issue => 
+              issue.body && issue.body.includes(marker)
+            );
+            
+            const body = [
+              marker,
+              '@oprom0004',
+              '',
+              `### 📢 自动文章生成成功报告 [${today}]`,
+              '',
+              `- **文章标题**: ${articleTitle}`,
+              `- **Slug/URL**: \`/variable-dc-power-supply/${articleSlug}\``,
+              `- **发布日期**: ${articleDate}`,
+              `- **文件路径**: \`${articleFile}\``,
+              `- **摘要**: ${articleSummary}`,
+              '',
+              '---',
+              '💡 本次发布为每周三自动更新。如果有任何问题，请检查 Action 运行日志。',
+            ].join('\n');
+            
+            const commentBody = [
+              `@oprom0004 自动文章生成完成 [${today}]`,
+              '',
+              `- **标题**: ${articleTitle}`,
+              `- **Slug**: ${articleSlug}`,
+              `- **摘要**: ${articleSummary}`
+            ].join('\n');
+            
+            if (existingIssue) {
+              await github.rest.issues.update({
+                owner,
+                repo,
+                issue_number: existingIssue.number,
+                title,
+                body,
+                state: 'open',
+              });
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number: existingIssue.number,
+                body: commentBody,
+              });
+              return;
+            }
+            
+            const { data: issue } = await github.rest.issues.create({
+              owner,
+              repo,
+              title,
+              body,
+            });
+            
+            await github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number: issue.number,
+              body: commentBody,
+            });
+
+      - name: Notify on Failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const marker = '<!-- auto-blog-generation-monitor -->';
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            
+            const title = '自动文章生成监控';
+            const today = new Date().toISOString().split('T')[0];
+            const runUrl = `${process.env.GITHUB_SERVER_URL}/${owner}/${repo}/actions/runs/${process.env.GITHUB_RUN_ID}`;
+            
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner,
+              repo,
+              state: 'all',
+              per_page: 100,
+            });
+            
+            const existingIssue = issues.find(issue => 
+              issue.body && issue.body.includes(marker)
+            );
+            
+            const body = [
+              marker,
+              '@oprom0004',
+              '',
+              `### ❌ 自动文章生成失败报告 [${today}]`,
+              '',
+              `任务在执行过程中遇到错误，未能成功发布新文章。`,
+              '',
+              `- **错误发生时间**: ${today}`,
+              `- **运行日志**: [查看 GitHub Action 运行日志](${runUrl})`,
+              '',
+              '请尽快检查并修复问题以避免影响周三的自动更新。',
+            ].join('\n');
+            
+            const commentBody = `@oprom0004 ⚠️ **自动文章生成失败**！请检查 [Action 运行日志](${runUrl})。`;
+            
+            if (existingIssue) {
+              await github.rest.issues.update({
+                owner,
+                repo,
+                issue_number: existingIssue.number,
+                title: '【警告】自动文章生成失败',
+                body,
+                state: 'open',
+              });
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number: existingIssue.number,
+                body: commentBody,
+              });
+              return;
+            }
+            
+            const { data: issue } = await github.rest.issues.create({
+              owner,
+              repo,
+              title: '【警告】自动文章生成失败',
+              body,
+            });
+            
+            await github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number: issue.number,
+              body: commentBody,
+            });
