@@ -25,7 +25,19 @@ const ROUTE_PATH_MAP = {
   "about-faq": "/afb-power-etm-series-faq"
 };
 
-export default function HomeView() {
+interface BlogPost {
+  slug: string;
+  title: string;
+  date: string;
+  summary: string;
+  keywords: string[];
+}
+
+interface HomeViewProps {
+  posts?: BlogPost[];
+}
+
+export default function HomeView({ posts = [] }: HomeViewProps) {
   const [selectedCurrent, setSelectedCurrent] = useState<number>(5);
   const [useCase, setUseCase] = useState<string>("lab");
   const [remoteSense, setRemoteSense] = useState<boolean>(true);
@@ -351,6 +363,64 @@ export default function HomeView() {
           ))}
         </div>
       </section>
+
+      {/* Latest Technical Articles & Industry Insights */}
+      {posts && posts.length > 0 && (
+        <section id="latest-articles" className="space-y-6 pt-4">
+          <div className="flex justify-between items-center border-b border-gray-800 pb-3">
+            <h3 className="text-sm font-mono uppercase tracking-wider text-gray-400">
+              Latest Technical Articles & Industry Insights
+            </h3>
+            <Link
+              href="/variable-dc-power-supply"
+              className="text-xs text-cyan-400 hover:text-cyan-300 font-mono uppercase flex items-center gap-1 transition cursor-pointer"
+            >
+              All Articles
+              <ArrowRight size={13} />
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {posts.map((post) => (
+              <article
+                key={post.slug}
+                className="bg-[#121214] border border-gray-800 hover:border-cyan-500/20 rounded-xl p-5 transition flex flex-col justify-between group h-full space-y-4"
+              >
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2 text-[10px] font-mono text-gray-500 uppercase">
+                    <span>{post.date}</span>
+                    <span>•</span>
+                    <span>AFB Power Editor</span>
+                  </div>
+                  <h4 className="text-sm font-bold text-gray-200 group-hover:text-cyan-400 transition-colors line-clamp-2">
+                    <Link href={`/variable-dc-power-supply/${post.slug}`} className="cursor-pointer">
+                      {post.title}
+                    </Link>
+                  </h4>
+                  <p className="text-xs text-gray-400 leading-relaxed line-clamp-3">
+                    {post.summary}
+                  </p>
+                </div>
+                <div className="pt-3 border-t border-gray-850 flex justify-between items-center text-[10px] font-mono uppercase">
+                  <div className="flex gap-1.5 overflow-hidden">
+                    {post.keywords.slice(0, 1).map((kw, idx) => (
+                      <span key={idx} className="px-1.5 py-0.5 rounded bg-gray-800 text-gray-400 text-[8px] tracking-wide font-bold">
+                        {kw}
+                      </span>
+                    ))}
+                  </div>
+                  <Link
+                    href={`/variable-dc-power-supply/${post.slug}`}
+                    className="text-cyan-400 hover:text-cyan-300 flex items-center gap-0.5 transition-colors font-bold cursor-pointer"
+                  >
+                    Read More
+                    <ArrowRight size={11} className="transform group-hover:translate-x-0.5 transition-transform" />
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Official Procurement Gateway */}
       <section
