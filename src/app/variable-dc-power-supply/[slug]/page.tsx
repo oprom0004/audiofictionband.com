@@ -10,7 +10,7 @@ import matter from "gray-matter";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import Link from "next/link";
-import { Calendar, User, Tag, ArrowLeft } from "lucide-react";
+import { Calendar, User, Tag } from "lucide-react";
 
 export const dynamic = "force-static";
 
@@ -92,14 +92,6 @@ export default async function ArticlePage({ params }: PageParams) {
   return (
     <article id="article-page" className="max-w-3xl mx-auto font-sans space-y-8">
 
-      {/* Back link */}
-      <Link
-        href="/variable-dc-power-supply"
-        className="inline-flex items-center gap-1.5 text-xs text-cyan-400 hover:text-cyan-300 font-mono uppercase transition"
-      >
-        <ArrowLeft size={13} />
-        Variable DC Power Supply Articles
-      </Link>
 
       {/* Article Header */}
       <header className="space-y-5 border-b border-gray-800 pb-8">
