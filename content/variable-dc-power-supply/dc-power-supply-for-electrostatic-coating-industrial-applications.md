@@ -1,6 +1,6 @@
 ---
 title: "Optimizing DC Power Supply for Electrostatic Coating Industrial Applications"
-date: "2026-09-02"
+date: "2027-01-06"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "DC power supply for electrostatic", "high voltage power electronics", "electrostatic finishing systems"]
 summary: "An engineering deep-dive into selecting high-stability, programmable DC power supplies for precision electrostatic coating processes, featuring AFB Power ETM series technical specifications."

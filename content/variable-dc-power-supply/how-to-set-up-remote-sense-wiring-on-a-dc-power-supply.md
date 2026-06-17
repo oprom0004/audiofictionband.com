@@ -1,6 +1,6 @@
 ---
 title: "How to Set Up Remote Sense Wiring on a DC Power Supply: Engineering Best Practices"
-date: "2026-10-28"
+date: "2027-03-03"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "how to set up remote sense wiring", "remote sensing", "voltage regulation"]
 summary: "A technical guide for test engineers on implementing remote sensing to eliminate voltage drop errors in high-precision DC power delivery."

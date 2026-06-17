@@ -1,6 +1,6 @@
 ---
 title: "Programmable DC Power Supply vs. Bench Power Supply: Key Differences for Engineering Excellence"
-date: "2026-01-14"
+date: "2026-05-20"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "programmable DC power supply vs", "DC power supply comparison", "lab power supply differences"]
 summary: "This article delineates the fundamental technical and operational distinctions between programmable DC power supplies and traditional bench power supplies, guiding engineers in selecting the optimal solution for their specific application requirements."

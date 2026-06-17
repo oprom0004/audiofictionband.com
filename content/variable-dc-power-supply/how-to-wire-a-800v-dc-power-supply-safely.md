@@ -1,6 +1,6 @@
 ---
 title: "Mastering Safe Wiring of 800V DC Power Supplies: An Engineering Guide"
-date: "2026-03-25"
+date: "2026-07-29"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "how to wire a 800V", "high voltage DC wiring safety", "electrical safety"]
 summary: "This comprehensive guide provides electrical engineers and technicians with essential protocols and technical considerations for safely wiring 800V DC power supplies, emphasizing best practices and compliance for high-voltage environments."

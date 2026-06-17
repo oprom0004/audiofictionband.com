@@ -1,6 +1,6 @@
 ---
 title: "Optimizing DC Power Supply for Semiconductor Component Burn-in Testing"
-date: "2026-08-12"
+date: "2026-12-16"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "DC power supply for semiconductor", "burn-in testing", "high voltage DC testing"]
 summary: "An engineering guide to selecting high-precision, programmable DC power supplies for semiconductor burn-in, focusing on stability, response time, and remote control integration."

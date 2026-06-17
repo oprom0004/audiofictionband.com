@@ -1,6 +1,6 @@
 ---
 title: "Mastering Accuracy: How to Calibrate a DC Power Supply Output Voltage"
-date: "2026-02-25"
+date: "2026-07-01"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "how to calibrate a DC", "DC power supply calibration", "voltage accuracy"]
 summary: "This article provides an in-depth guide for electrical test engineers and lab technicians on how to calibrate a DC power supply output voltage, emphasizing precision, necessary equipment, and best practices for maintaining accuracy in critical applications."

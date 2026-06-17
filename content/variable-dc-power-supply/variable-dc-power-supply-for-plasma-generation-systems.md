@@ -1,6 +1,6 @@
 ---
 title: "Precision Control: Selecting a Variable DC Power Supply for Plasma Generation Systems"
-date: "2026-09-16"
+date: "2027-01-20"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "variable DC power supply for plasma generation systems", "high voltage DC power", "plasma process control"]
 summary: "An engineering guide on optimizing plasma generation stability using high-voltage programmable DC power supplies with rapid CC/CV crossover and low ripple noise."

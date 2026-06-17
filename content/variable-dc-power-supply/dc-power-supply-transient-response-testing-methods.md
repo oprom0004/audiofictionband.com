@@ -1,6 +1,6 @@
 ---
 title: "Comprehensive Methods for DC Power Supply Transient Response Testing"
-date: "2026-05-06"
+date: "2026-09-09"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "DC power supply transient response", "load transient testing", "power supply stability"]
 summary: "This article details essential methodologies for DC power supply transient response testing, covering load and line transient analysis, and highlighting the role of advanced programmable power supplies in ensuring system stability and performance."

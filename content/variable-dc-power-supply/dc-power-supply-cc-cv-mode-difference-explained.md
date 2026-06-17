@@ -1,6 +1,6 @@
 ---
 title: "DC Power Supply CC CV Mode Difference Explained: Constant Current vs. Constant Voltage"
-date: "2026-02-18"
+date: "2026-06-24"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "DC power supply CC CV", "constant current mode", "constant voltage mode"]
 summary: "This article provides a technical explanation of the fundamental differences between Constant Voltage (CV) and Constant Current (CC) operating modes in DC power supplies, outlining their applications, dynamic crossover, and critical engineering parameters for optimal system performance."

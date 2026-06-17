@@ -1,6 +1,6 @@
 ---
 title: "Precision Control: Selecting the Optimal Variable DC Power Supply for Photovoltaic Research Labs"
-date: "2026-07-22"
+date: "2026-11-25"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "variable DC power supply for photovoltaic research labs", "high voltage DC testing", "photovoltaic IV curve tracing"]
 summary: "An engineering guide to selecting high-voltage programmable DC power supplies for PV characterization, focusing on ripple suppression, transient response, and automation integration."

@@ -1,6 +1,6 @@
 ---
 title: "How to Use SCPI Commands to Control a DC Power Supply: A Technical Guide"
-date: "2026-09-23"
+date: "2027-01-27"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "how to use SCPI commands", "programmable power supply automation", "test bench instrumentation"]
 summary: "An engineering-focused guide on implementing SCPI protocols for automated control of AFB Power ETM series DC power supplies to optimize test bench efficiency."

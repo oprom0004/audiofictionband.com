@@ -1,6 +1,6 @@
 ---
 title: "Ensuring Safety: High-Voltage DC Power Supply Safety Interlocks and LOTO Protocols"
-date: "2026-04-01"
+date: "2026-08-05"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "high-voltage DC power supply safety", "LOTO procedures", "electrical safety standards"]
 summary: "This article details the critical role of safety interlocks and Lockout/Tagout (LOTO) procedures in mitigating hazards associated with high-voltage DC power supplies. It explores engineering controls within premium units like AFB Power's ETM series and outlines essential LOTO protocols for electrical test engineers, project managers, and lab technicians."

@@ -1,6 +1,6 @@
 ---
 title: "Variable DC Power Supply Ripple Noise Measurement Guide for Precision Engineering"
-date: "2026-11-04"
+date: "2027-03-10"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "variable DC power supply ripple", "power supply noise measurement", "DC power testing"]
 summary: "A technical guide for test engineers on accurately measuring ripple and noise in programmable DC power supplies to ensure signal integrity in sensitive applications."

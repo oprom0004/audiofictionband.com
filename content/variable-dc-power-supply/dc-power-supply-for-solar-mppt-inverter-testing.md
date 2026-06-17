@@ -1,6 +1,6 @@
 ---
 title: "Optimizing Solar MPPT Inverter Testing with Programmable DC Power Supplies"
-date: "2026-07-15"
+date: "2026-11-18"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "DC power supply for solar", "MPPT testing", "photovoltaic simulation"]
 summary: "An engineering guide to selecting high-voltage programmable DC power supplies for accurate solar MPPT inverter performance validation and efficiency testing."

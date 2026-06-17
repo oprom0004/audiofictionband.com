@@ -1,6 +1,6 @@
 ---
 title: "Precision Variable DC Power Supply for Dielectric Breakdown Testing: An Engineering Guide"
-date: "2026-04-08"
+date: "2026-08-12"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "dielectric breakdown testing", "programmable DC power supply", "high voltage testing"]
 summary: "This article provides an in-depth technical guide on selecting and utilizing variable DC power supplies for accurate and reliable dielectric breakdown testing, highlighting AFB Power's ETM series and critical electrical parameters."

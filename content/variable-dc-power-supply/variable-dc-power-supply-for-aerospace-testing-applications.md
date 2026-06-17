@@ -1,6 +1,6 @@
 ---
 title: "Optimizing High-Voltage Variable DC Power Supply for Aerospace Testing Applications"
-date: "2026-07-01"
+date: "2026-11-04"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "variable DC power supply for aerospace testing", "programmable DC power supplies", "high voltage testing"]
 summary: "An engineering guide to selecting high-voltage programmable DC power supplies for aerospace component validation, focusing on precision, transient response, and safety standards."

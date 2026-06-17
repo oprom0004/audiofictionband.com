@@ -1,6 +1,6 @@
 ---
 title: "Regulated vs. Programmable DC Power Supplies: A Technical Deep Dive for Electrical Engineers"
-date: "2026-01-28"
+date: "2026-06-03"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "difference between regulated and programmable", "programmable power supply benefits", "DC power supply types"]
 summary: "This article clarifies the fundamental distinctions between regulated and programmable DC power supplies, detailing their operational principles, performance metrics, and suitability for various electrical engineering applications, from basic lab work to advanced automated test environments."

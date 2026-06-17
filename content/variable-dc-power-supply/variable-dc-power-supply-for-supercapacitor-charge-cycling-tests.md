@@ -1,6 +1,6 @@
 ---
 title: "Optimizing Supercapacitor Charge Cycling Tests with High-Voltage Variable DC Power Supplies"
-date: "2026-08-26"
+date: "2026-12-30"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "variable DC power supply for supercapacitor charge cycling tests", "supercapacitor testing", "programmable DC power supply"]
 summary: "An engineering deep-dive into selecting the right programmable DC power supply for supercapacitor cycling, focusing on response time, CC/CV crossover, and high-voltage stability."

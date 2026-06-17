@@ -1,6 +1,6 @@
 ---
 title: "Understanding the Multifaceted Uses of a Programmable DC Power Supply in Engineering"
-date: "2026-02-04"
+date: "2026-06-10"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "what is a programmable DC", "DC power supply applications", "test and measurement equipment"]
 summary: "This article delves into the critical applications and technical advantages of programmable DC power supplies, exploring their use across various engineering disciplines from R&D to automated testing, highlighting key specifications and compliance standards."

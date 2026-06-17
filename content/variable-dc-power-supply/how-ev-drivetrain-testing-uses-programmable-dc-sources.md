@@ -1,6 +1,6 @@
 ---
 title: "Optimizing EV Drivetrain Testing: The Indispensable Role of Programmable DC Sources"
-date: "2026-05-27"
+date: "2026-09-30"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "how EV drivetrain testing uses", "electric vehicle testing", "dc power supply applications"]
 summary: "This article explores the critical applications of programmable DC power supplies in electric vehicle (EV) drivetrain testing, detailing their technical advantages and practical implementation for engineers validating complex EV components."

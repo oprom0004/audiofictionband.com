@@ -1,6 +1,6 @@
 ---
 title: "Mastering DC Power Supply Protection: How to Select Fuse and Circuit Breaker Ratings"
-date: "2026-04-22"
+date: "2026-08-26"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "DC overcurrent protection", "fuse selection guide", "circuit breaker sizing"]
 summary: "This article provides a comprehensive guide for electrical engineers and technicians on how to select appropriate fuse and circuit breaker ratings for DC power supplies, ensuring safety, reliability, and optimal system performance."

@@ -1,6 +1,6 @@
 ---
 title: "Optimizing Programmable DC Power Supply RS485 Modbus RTU Configuration for Industrial Automation"
-date: "2026-10-21"
+date: "2027-02-24"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "programmable DC power supply RS485", "Modbus RTU integration", "industrial test systems"]
 summary: "A technical guide for engineers on configuring RS485 Modbus RTU communication for AFB Power ETM series programmable DC supplies to ensure reliable automated test integration."

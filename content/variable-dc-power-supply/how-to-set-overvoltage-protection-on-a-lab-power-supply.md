@@ -1,6 +1,6 @@
 ---
 title: "How to Set Overvoltage Protection on a Lab Power Supply: A Technical Guide"
-date: "2026-12-02"
+date: "2027-04-07"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "how to set overvoltage protection", "OVP configuration", "DC power supply safety"]
 summary: "Learn the engineering best practices for configuring Overvoltage Protection (OVP) on high-voltage programmable DC power supplies to protect sensitive DUTs from transient spikes and control loop instability."

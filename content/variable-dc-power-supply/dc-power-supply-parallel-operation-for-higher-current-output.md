@@ -1,6 +1,6 @@
 ---
 title: "Mastering DC Power Supply Parallel Operation for Enhanced Current Output"
-date: "2026-05-13"
+date: "2026-09-16"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "DC power supply parallel operation", "high current DC supply", "power supply current sharing"]
 summary: "This article provides an in-depth technical guide on the principles and practical implementation of parallel operation for DC power supplies to achieve higher current output, focusing on AFB Power's ETM series and critical engineering considerations."
