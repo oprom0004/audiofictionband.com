@@ -58,17 +58,17 @@ function markdownToHtml(md: string): string {
     // Links
     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-2">$1</a>')
     // Unordered list items
-    .replace(/^\s*[-*]\s+(.+)$/gm, '<li class="ml-5 list-disc text-gray-400 text-sm leading-relaxed">$1</li>')
+    .replace(/^\s*[-*]\s+(.+)$/gm, '<li class="ml-5 list-disc text-gray-300 text-base leading-relaxed">$1</li>')
     // Ordered list items
-    .replace(/^\d+\.\s+(.+)$/gm, '<li class="ml-5 list-decimal text-gray-400 text-sm leading-relaxed">$1</li>')
+    .replace(/^\d+\.\s+(.+)$/gm, '<li class="ml-5 list-decimal text-gray-300 text-base leading-relaxed">$1</li>')
     // Inline code
     .replace(/`([^`]+)`/g, '<code class="bg-gray-800 text-cyan-300 text-xs px-1.5 py-0.5 rounded font-mono">$1</code>')
     // Horizontal rule
     .replace(/^---$/gm, '<hr class="border-gray-800 my-8" />')
     // Blank lines → paragraph breaks
-    .replace(/\n\n+/g, '</p><p class="text-gray-400 text-sm leading-relaxed my-4">')
+    .replace(/\n\n+/g, '</p><p class="text-gray-300 text-base leading-relaxed my-4">')
     // Wrap in opening paragraph
-    .replace(/^/, '<p class="text-gray-400 text-sm leading-relaxed my-4">')
+    .replace(/^/, '<p class="text-gray-300 text-base leading-relaxed my-4">')
     .replace(/$/, "</p>")
     // Wrap consecutive <li> in <ul>
     .replace(/(<li[^>]*>[\s\S]*?<\/li>)(\s*<li)/g, "$1$2")
@@ -104,7 +104,7 @@ export default async function ArticlePage({ params }: PageParams) {
       {/* Article Header */}
       <header className="space-y-5 border-b border-gray-800 pb-8">
         {/* Meta row */}
-        <div className="flex flex-wrap items-center gap-3 text-[10px] font-mono text-gray-500 uppercase">
+        <div className="flex flex-wrap items-center gap-3 text-xs font-mono text-gray-500 uppercase">
           {data.date && (
             <span className="flex items-center gap-1">
               <Calendar size={11} className="text-cyan-400" />
@@ -137,7 +137,7 @@ export default async function ArticlePage({ params }: PageParams) {
             {data.keywords.map((kw: string, idx: number) => (
               <span
                 key={idx}
-                className="inline-flex items-center gap-0.5 px-2 py-0.5 rounded bg-gray-800 text-[9px] font-mono text-gray-400 uppercase font-semibold"
+                className="inline-flex items-center gap-0.5 px-2 py-0.5 rounded bg-gray-800 text-[11px] font-mono text-gray-400 uppercase font-semibold"
               >
                 <Tag size={8} />
                 {kw}
@@ -150,7 +150,7 @@ export default async function ArticlePage({ params }: PageParams) {
       {/* Article Body */}
       <section
         id="article-body"
-        className="prose-sm prose-invert max-w-none"
+        className="prose prose-invert max-w-none"
         dangerouslySetInnerHTML={{ __html: htmlContent }}
       />
 
