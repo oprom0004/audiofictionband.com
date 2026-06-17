@@ -1,6 +1,6 @@
 ---
 title: "Optimizing DC Power Supply for LED Driver Testing and Validation"
-date: "2027-04-21"
+date: "2027-04-18"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "DC power supply for LED", "LED driver validation", "programmable power supply"]
 summary: "This technical guide explores critical requirements for selecting a programmable DC power supply for LED driver testing, focusing on high-voltage stability, transient response, and precision measurement."

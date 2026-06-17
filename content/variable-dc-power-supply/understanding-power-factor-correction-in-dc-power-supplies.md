@@ -1,6 +1,6 @@
 ---
 title: "Understanding Power Factor Correction in DC Power Supplies: A Technical Guide"
-date: "2027-03-31"
+date: "2027-03-28"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "understanding power factor correction in", "active PFC", "harmonic distortion"]
 summary: "An in-depth analysis of Power Factor Correction (PFC) in high-voltage DC power supplies and its critical role in maintaining grid efficiency and compliance for laboratory environments."

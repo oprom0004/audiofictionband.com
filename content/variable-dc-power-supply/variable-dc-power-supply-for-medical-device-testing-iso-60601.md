@@ -1,6 +1,6 @@
 ---
 title: "Precision Variable DC Power Supply for Medical Device Testing: Meeting ISO 60601 Standards"
-date: "2027-05-05"
+date: "2027-05-02"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply for medical device testing ISO 60601", "programmable DC power supply", "ISO 60601 compliance testing"]
 summary: "An engineering guide on selecting high-voltage programmable DC power supplies for ISO 60601 compliance, focusing on stability, ripple control, and precision instrumentation."

@@ -1,6 +1,6 @@
 ---
 title: "Optimizing DC Power Supply for EV Charging Station Hardware Testing"
-date: "2026-10-07"
+date: "2026-10-04"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "DC power supply for EV", "EVSE testing", "programmable power supply"]
 summary: "An engineering deep-dive into utilizing high-voltage programmable DC power supplies to validate EV charging hardware reliability, safety, and compliance."

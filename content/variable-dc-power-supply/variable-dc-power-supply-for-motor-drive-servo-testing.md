@@ -1,6 +1,6 @@
 ---
 title: "Optimizing Motor Drive Servo Testing with High-Voltage Variable DC Power Supplies"
-date: "2026-12-09"
+date: "2026-12-06"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "variable DC power supply for motor drive servo testing", "800V programmable power supply", "servo motor validation"]
 summary: "An engineering deep-dive into selecting and implementing variable DC power supplies for high-voltage motor drive and servo system validation."

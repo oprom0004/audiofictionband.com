@@ -1,6 +1,6 @@
 ---
 title: "DC Power Supply Python Automation with PySerial: A Technical Guide for Engineers"
-date: "2027-02-03"
+date: "2027-01-31"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "DC power supply Python automation", "PySerial SCPI programming", "ETM series power supply"]
 summary: "Learn how to streamline your laboratory testing workflows by implementing DC power supply Python automation using PySerial and the AFB Power ETM series."

@@ -1,6 +1,6 @@
 ---
 title: "Optimizing Electrochemical Research with High-Voltage Variable DC Power Supplies"
-date: "2027-04-14"
+date: "2027-04-11"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "variable DC power supply for electrochemical research", "programmable DC power supply", "high voltage electrochemistry"]
 summary: "An engineering deep-dive into selecting high-precision variable DC power supplies for electrochemical applications, focusing on stability, response time, and the ETM series capabilities."

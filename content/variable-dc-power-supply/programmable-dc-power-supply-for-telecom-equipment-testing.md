@@ -1,6 +1,6 @@
 ---
 title: "Optimizing Telecom Equipment Testing with High-Voltage Programmable DC Power Supplies"
-date: "2027-04-28"
+date: "2027-04-25"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "programmable DC power supply for telecom equipment testing", "high voltage DC testing", "telecom infrastructure validation"]
 summary: "An engineering-focused guide on utilizing high-voltage programmable DC power supplies to ensure reliability and compliance in modern telecommunications infrastructure testing."

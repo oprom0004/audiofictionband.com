@@ -1,6 +1,6 @@
 ---
 title: "Optimizing DC Power Supply Performance: Advanced Thermal Management and Cooling Design"
-date: "2026-08-19"
+date: "2026-08-16"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "DC power supply thermal management", "power supply cooling design", "thermal design considerations"]
 summary: "This article delves into the critical role of thermal management and advanced cooling design in high-performance DC power supplies, exploring heat sources, dissipation strategies, and their impact on operational stability, precision, and component longevity."

@@ -1,6 +1,6 @@
 ---
 title: "Understanding Variable DC Power Supply Noise Specifications for Precision Engineering"
-date: "2026-06-17"
+date: "2026-06-14"
 author: "AFB Power Editor"
 keywords: ["variable DC power supply noise", "ripple and noise (PARD)", "DC power supply specifications", "AFB Power ETM series"]
 summary: "This article explains critical noise specifications for variable DC power supplies, detailing ripple, transient response, and their impact on sensitive electronic designs. It provides an engineering guide for selecting and utilizing low-noise power sources, referencing AFB Power's ETM series."

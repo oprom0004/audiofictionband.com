@@ -1,6 +1,6 @@
 ---
 title: "Advanced DC Power Supply for Railway Traction System Simulation: Engineering Requirements and AFB Power Solutions"
-date: "2026-10-21"
+date: "2026-10-18"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "DC power supply for railway", "traction system testing", "high voltage programmable power"]
 summary: "An in-depth technical analysis of simulating railway traction environments using high-voltage programmable DC power supplies and the critical role of precision control in power electronics validation."

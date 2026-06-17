@@ -1,6 +1,6 @@
 ---
 title: "Deciphering DC Power Supply Datasheets: An Engineer's Comprehensive Guide"
-date: "2026-05-27"
+date: "2026-05-24"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "how to read DC power", "DC power supply specifications", "datasheet interpretation"]
 summary: "This article provides electrical test engineers, project managers, and lab technicians with a comprehensive guide on how to effectively read and interpret DC power supply specifications datasheets to ensure optimal equipment selection and application performance."

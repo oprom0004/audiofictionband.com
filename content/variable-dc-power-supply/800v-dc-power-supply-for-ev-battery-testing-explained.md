@@ -1,6 +1,6 @@
 ---
 title: "800V DC Power Supply for EV Battery Testing: An Engineering Deep Dive"
-date: "2026-07-22"
+date: "2026-07-19"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "800V DC power supply for", "EV battery testing", "programmable power supply", "high voltage DC source"]
 summary: "This article provides an in-depth explanation of the critical role and technical requirements for 800V DC power supplies in electric vehicle (EV) battery testing, detailing essential parameters and practical applications for engineers and technicians."

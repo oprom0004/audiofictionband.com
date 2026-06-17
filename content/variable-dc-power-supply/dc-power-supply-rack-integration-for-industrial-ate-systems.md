@@ -1,6 +1,6 @@
 ---
 title: "Optimizing DC Power Supply Rack Integration for Industrial ATE Systems"
-date: "2026-12-02"
+date: "2026-11-29"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "DC power supply rack integration", "automated test equipment", "high-voltage power systems"]
 summary: "A technical guide for integrating programmable DC power supplies into ATE environments, focusing on thermal management, signal integrity, and high-voltage precision."

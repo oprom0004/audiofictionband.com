@@ -80,10 +80,10 @@ function slugify(text) {
     .replace(/\-\-+/g, "-").replace(/^-+/, "").replace(/-+$/, "");
 }
 
-// Start date: 2026-05-13 (Wednesday)
-// Article 6 falls exactly on 2026-06-17 (Today)
+// Start date: 2026-05-10 (Sunday)
+// Article 6 falls exactly on 2026-06-14 (Sunday)
 function getNewDate(index) {
-  const startDate = new Date("2026-05-13");
+  const startDate = new Date("2026-05-10");
   startDate.setDate(startDate.getDate() + index * 7);
   return startDate.toISOString().split("T")[0];
 }

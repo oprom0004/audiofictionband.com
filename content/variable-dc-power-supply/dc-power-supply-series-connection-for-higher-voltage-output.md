@@ -1,6 +1,6 @@
 ---
 title: "Mastering DC Power Supply Series Connection for Elevated Voltage Output"
-date: "2026-09-23"
+date: "2026-09-20"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "DC power supply series connection", "high voltage DC power supply", "programmable power supply configuration"]
 summary: "This article provides an in-depth technical guide for electrical test engineers on safely and effectively connecting DC power supplies in series to achieve higher voltage outputs, focusing on AFB Power's ETM series and critical engineering considerations."

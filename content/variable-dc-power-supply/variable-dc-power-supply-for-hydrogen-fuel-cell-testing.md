@@ -1,6 +1,6 @@
 ---
 title: "Optimizing Hydrogen Fuel Cell Testing with High-Voltage Variable DC Power Supplies"
-date: "2026-10-14"
+date: "2026-10-11"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "variable DC power supply for hydrogen fuel cell testing", "programmable DC power supply", "fuel cell characterization"]
 summary: "An engineering deep-dive into selecting high-voltage programmable DC power supplies for fuel cell stack characterization, focusing on precision, stability, and transient response."

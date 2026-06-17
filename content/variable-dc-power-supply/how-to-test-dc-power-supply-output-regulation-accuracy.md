@@ -1,6 +1,6 @@
 ---
 title: "Mastering DC Power Supply Output Regulation Accuracy: A Comprehensive Test Guide for Engineers"
-date: "2026-07-08"
+date: "2026-07-05"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "how to test DC power", "output regulation measurement", "dc power supply testing"]
 summary: "This article provides a detailed guide for electrical engineers and technicians on how to accurately test and verify the output regulation of DC power supplies, covering key parameters and practical methodologies."

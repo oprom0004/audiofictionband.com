@@ -1,6 +1,6 @@
 ---
 title: "Optimizing Military Avionics Test Benches with High-Voltage Variable DC Power Supplies"
-date: "2026-11-11"
+date: "2026-11-08"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "variable DC power supply for military avionics test benches", "programmable DC power", "avionics testing equipment"]
 summary: "An engineering guide to selecting high-voltage programmable DC power supplies for military avionics, focusing on precision, transient response, and rigorous testing standards."

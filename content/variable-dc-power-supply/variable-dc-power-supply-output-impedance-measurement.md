@@ -1,6 +1,6 @@
 ---
 title: "Precision Measurement of Variable DC Power Supply Output Impedance for Critical Applications"
-date: "2026-07-15"
+date: "2026-07-12"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "variable DC power supply output", "output impedance measurement", "power supply stability"]
 summary: "This article provides an in-depth guide for electrical engineers on the critical process of measuring output impedance in variable DC power supplies, detailing methodologies, interpreting results, and highlighting AFB Power's solutions for stable system performance."

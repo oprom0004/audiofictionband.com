@@ -1,6 +1,6 @@
 ---
 title: "Choosing the Best DC Power Supply for Capacitor Burn-in Testing: Engineering Best Practices"
-date: "2026-12-23"
+date: "2026-12-20"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "best DC power supply for capacitor burn-in testing", "high voltage DC testing", "programmable DC power supply"]
 summary: "An engineering guide to selecting high-voltage programmable power supplies for capacitor burn-in, focusing on ripple, transient response, and reliability."

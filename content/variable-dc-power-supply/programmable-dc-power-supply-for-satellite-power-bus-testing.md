@@ -1,6 +1,6 @@
 ---
 title: "Optimizing Satellite Power Bus Testing with Programmable DC Power Supplies"
-date: "2026-10-28"
+date: "2026-10-25"
 author: "AFB Power Editor"
 keywords: ["programmable DC power supply for satellite power bus testing", "satellite power systems", "high voltage DC testing"]
 summary: "An engineering-focused guide on utilizing high-precision programmable DC power supplies to simulate satellite bus dynamics and ensure mission-critical reliability."

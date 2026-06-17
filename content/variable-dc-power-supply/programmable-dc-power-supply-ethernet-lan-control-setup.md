@@ -1,6 +1,6 @@
 ---
 title: "Technical Guide: Programmable DC Power Supply Ethernet LAN Control Setup"
-date: "2027-02-17"
+date: "2027-02-14"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "programmable DC power supply Ethernet", "automated test equipment", "SCPI instrument control"]
 summary: "A professional guide for engineers on integrating AFB Power ETM series supplies into automated test environments using Ethernet LAN connectivity for precise remote control."

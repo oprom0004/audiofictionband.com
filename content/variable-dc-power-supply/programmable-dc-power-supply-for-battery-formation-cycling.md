@@ -1,6 +1,6 @@
 ---
 title: "Optimizing Battery Formation Cycling with High-Voltage Programmable DC Power Supplies"
-date: "2027-01-13"
+date: "2027-01-10"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "programmable DC power supply for battery formation cycling", "battery testing equipment", "high voltage power supply"]
 summary: "An engineering deep-dive into the critical role of high-voltage programmable DC power supplies in battery formation and the technical requirements for precision cycling."

@@ -1,6 +1,6 @@
 ---
 title: "How to Use LabVIEW to Control a Programmable DC Power Supply: Engineering Best Practices"
-date: "2027-02-10"
+date: "2027-02-07"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "how to use LabVIEW to", "automated test equipment", "SCPI programming"]
 summary: "A technical guide for integrating AFB Power ETM series units into automated test environments using LabVIEW for precise voltage and current control."

@@ -1,6 +1,6 @@
 ---
 title: "Optimizing Precision: Remote Sensing Compensation in High-Voltage DC Power Supplies"
-date: "2027-03-17"
+date: "2027-03-14"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "remote sensing compensation in high-voltage", "precision power delivery", "load regulation"]
 summary: "An in-depth technical guide on implementing remote sensing compensation to mitigate voltage drops in high-voltage DC systems, ensuring precision for demanding laboratory and industrial applications."

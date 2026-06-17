@@ -1,6 +1,6 @@
 ---
 title: "Variable DC Power Supply Current Limiting Explained: Technical Principles and Engineering Applications"
-date: "2027-03-24"
+date: "2027-03-21"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "variable DC power supply current", "CC/CV crossover", "current limiting"]
 summary: "An in-depth technical analysis of current limiting mechanisms in programmable DC power supplies and their critical role in protecting sensitive DUTs during power-up and fault conditions."

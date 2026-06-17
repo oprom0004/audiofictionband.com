@@ -1,6 +1,6 @@
 ---
 title: "Choosing the Right Variable DC Power Supply for Laboratory Applications"
-date: "2026-05-13"
+date: "2026-05-10"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "how to choose a variable", "laboratory power supply selection", "programmable power supply"]
 summary: "This article provides a comprehensive guide for electrical engineers, project managers, and lab technicians on selecting the optimal variable DC power supply for diverse laboratory needs, focusing on critical technical specifications and operational features."

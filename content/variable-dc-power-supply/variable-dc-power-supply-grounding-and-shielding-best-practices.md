@@ -1,6 +1,6 @@
 ---
 title: "Optimizing Performance: Variable DC Power Supply Grounding and Shielding Best Practices"
-date: "2026-09-02"
+date: "2026-08-30"
 author: "AFB Power Editor"
 keywords: ["variable dc power supply", "variable DC power supply grounding", "EMI shielding", "lab safety"]
 summary: "This article provides an in-depth guide to grounding and shielding best practices for variable DC power supplies, crucial for ensuring safety, accuracy, and performance in critical electrical engineering applications. It covers fundamental principles, practical techniques, and considerations for advanced programmable units like AFB Power's ETM series."
