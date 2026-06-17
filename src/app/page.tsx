@@ -46,10 +46,10 @@ function getLatestBlogPosts(): BlogPost[] {
       };
     });
 
-  // Sort by date (newest first) and take the latest 3
+  // Sort by date (newest first) and take the latest 6
   return posts
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-    .slice(0, 3);
+    .slice(0, 6);
 }
 
 export default function Page() {
