@@ -1,1 +1,320 @@
-[]
+{
+  "rssTitles": [],
+  "usedKeywords": [
+    "how to choose a variable DC power supply for laboratory use",
+    "programmable DC power supply vs bench power supply differences",
+    "how to read DC power supply specifications datasheet",
+    "difference between regulated and programmable DC power supplies",
+    "what is a programmable DC power supply used for",
+    "variable DC power supply noise specifications explained",
+    "DC power supply CC CV mode difference explained",
+    "how to calibrate a DC power supply output voltage",
+    "how to test DC power supply output regulation accuracy",
+    "variable DC power supply output impedance measurement",
+    "800V DC power supply for EV battery testing explained",
+    "how to wire a 800V DC power supply safely",
+    "high-voltage DC power supply safety interlocks and LOTO",
+    "variable DC power supply for dielectric breakdown testing",
+    "DC power supply thermal management and cooling design",
+    "how to select DC power supply fuse and circuit breaker ratings",
+    "variable DC power supply grounding and shielding best practices",
+    "DC power supply transient response testing methods",
+    "DC power supply parallel operation for higher current output",
+    "DC power supply series connection for higher voltage output",
+    "how EV drivetrain testing uses programmable DC sources",
+    "DC power supply for EV charging station hardware testing",
+    "variable DC power supply for hydrogen fuel cell testing",
+    "DC power supply for railway traction system simulation",
+    "programmable DC power supply for satellite power bus testing",
+    "variable DC power supply for aerospace testing applications",
+    "variable DC power supply for military avionics test benches",
+    "DC power supply for solar MPPT inverter testing",
+    "variable DC power supply for photovoltaic research labs",
+    "DC power supply rack integration for industrial ATE systems",
+    "variable DC power supply for motor drive servo testing",
+    "DC power supply for semiconductor component burn-in testing",
+    "best DC power supply for capacitor burn-in testing",
+    "variable DC power supply for supercapacitor charge cycling tests",
+    "DC power supply for electrostatic coating industrial applications",
+    "programmable DC power supply for battery formation cycling",
+    "variable DC power supply for plasma generation systems",
+    "how to use SCPI commands to control a DC power supply",
+    "DC power supply Python automation with PySerial tutorial",
+    "how to use LabVIEW to control a programmable DC power supply",
+    "programmable DC power supply Ethernet LAN control setup",
+    "programmable DC power supply RS485 Modbus RTU configuration",
+    "how to set up remote sense wiring on a DC power supply",
+    "variable DC power supply ripple noise measurement guide",
+    "remote sensing compensation in high-voltage DC power supplies",
+    "variable DC power supply current limiting explained",
+    "understanding power factor correction in DC power supplies",
+    "how to set overvoltage protection on a lab power supply",
+    "variable DC power supply for electrochemical research",
+    "DC power supply for LED driver testing and validation",
+    "programmable DC power supply for telecom equipment testing",
+    "variable DC power supply for medical device testing ISO 60601"
+  ],
+  "publishedArticles": [
+    {
+      "slug": "how-to-choose-a-variable-dc-power-supply-for-laboratory-use",
+      "date": "2026-01-07",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "programmable-dc-power-supply-vs-bench-power-supply-differences",
+      "date": "2026-01-14",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "how-to-read-dc-power-supply-specifications-datasheet",
+      "date": "2026-01-21",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "difference-between-regulated-and-programmable-dc-power-supplies",
+      "date": "2026-01-28",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "what-is-a-programmable-dc-power-supply-used-for",
+      "date": "2026-02-04",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "variable-dc-power-supply-noise-specifications-explained",
+      "date": "2026-02-11",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "dc-power-supply-cc-cv-mode-difference-explained",
+      "date": "2026-02-18",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "how-to-calibrate-a-dc-power-supply-output-voltage",
+      "date": "2026-02-25",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "how-to-test-dc-power-supply-output-regulation-accuracy",
+      "date": "2026-03-04",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "variable-dc-power-supply-output-impedance-measurement",
+      "date": "2026-03-11",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "800v-dc-power-supply-for-ev-battery-testing-explained",
+      "date": "2026-03-18",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "how-to-wire-a-800v-dc-power-supply-safely",
+      "date": "2026-03-25",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "high-voltage-dc-power-supply-safety-interlocks-and-loto",
+      "date": "2026-04-01",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "variable-dc-power-supply-for-dielectric-breakdown-testing",
+      "date": "2026-04-08",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "dc-power-supply-thermal-management-and-cooling-design",
+      "date": "2026-04-15",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "how-to-select-dc-power-supply-fuse-and-circuit-breaker-ratings",
+      "date": "2026-04-22",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "variable-dc-power-supply-grounding-and-shielding-best-practices",
+      "date": "2026-04-29",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "dc-power-supply-transient-response-testing-methods",
+      "date": "2026-05-06",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "dc-power-supply-parallel-operation-for-higher-current-output",
+      "date": "2026-05-13",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "dc-power-supply-series-connection-for-higher-voltage-output",
+      "date": "2026-05-20",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "how-ev-drivetrain-testing-uses-programmable-dc-sources",
+      "date": "2026-05-27",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "dc-power-supply-for-ev-charging-station-hardware-testing",
+      "date": "2026-06-03",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "variable-dc-power-supply-for-hydrogen-fuel-cell-testing",
+      "date": "2026-06-10",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "dc-power-supply-for-railway-traction-system-simulation",
+      "date": "2026-06-17",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "programmable-dc-power-supply-for-satellite-power-bus-testing",
+      "date": "2026-06-24",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "variable-dc-power-supply-for-aerospace-testing-applications",
+      "date": "2026-07-01",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "variable-dc-power-supply-for-military-avionics-test-benches",
+      "date": "2026-07-08",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "dc-power-supply-for-solar-mppt-inverter-testing",
+      "date": "2026-07-15",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "variable-dc-power-supply-for-photovoltaic-research-labs",
+      "date": "2026-07-22",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "dc-power-supply-rack-integration-for-industrial-ate-systems",
+      "date": "2026-07-29",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "variable-dc-power-supply-for-motor-drive-servo-testing",
+      "date": "2026-08-05",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "dc-power-supply-for-semiconductor-component-burn-in-testing",
+      "date": "2026-08-12",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "best-dc-power-supply-for-capacitor-burn-in-testing",
+      "date": "2026-08-19",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "variable-dc-power-supply-for-supercapacitor-charge-cycling-tests",
+      "date": "2026-08-26",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "dc-power-supply-for-electrostatic-coating-industrial-applications",
+      "date": "2026-09-02",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "programmable-dc-power-supply-for-battery-formation-cycling",
+      "date": "2026-09-09",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "variable-dc-power-supply-for-plasma-generation-systems",
+      "date": "2026-09-16",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "how-to-use-scpi-commands-to-control-a-dc-power-supply",
+      "date": "2026-09-23",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "dc-power-supply-python-automation-with-pyserial-tutorial",
+      "date": "2026-09-30",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "how-to-use-labview-to-control-a-programmable-dc-power-supply",
+      "date": "2026-10-07",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "programmable-dc-power-supply-ethernet-lan-control-setup",
+      "date": "2026-10-14",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "programmable-dc-power-supply-rs485-modbus-rtu-configuration",
+      "date": "2026-10-21",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "how-to-set-up-remote-sense-wiring-on-a-dc-power-supply",
+      "date": "2026-10-28",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "variable-dc-power-supply-ripple-noise-measurement-guide",
+      "date": "2026-11-04",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "remote-sensing-compensation-in-high-voltage-dc-power-supplies",
+      "date": "2026-11-11",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "variable-dc-power-supply-current-limiting-explained",
+      "date": "2026-11-18",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "understanding-power-factor-correction-in-dc-power-supplies",
+      "date": "2026-11-25",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "how-to-set-overvoltage-protection-on-a-lab-power-supply",
+      "date": "2026-12-02",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "variable-dc-power-supply-for-electrochemical-research",
+      "date": "2026-12-09",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "dc-power-supply-for-led-driver-testing-and-validation",
+      "date": "2026-12-16",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "programmable-dc-power-supply-for-telecom-equipment-testing",
+      "date": "2026-12-23",
+      "source": "pre-generated"
+    },
+    {
+      "slug": "variable-dc-power-supply-for-medical-device-testing-iso-60601",
+      "date": "2026-12-30",
+      "source": "pre-generated"
+    }
+  ],
+  "rssSourceIndex": 0
+}

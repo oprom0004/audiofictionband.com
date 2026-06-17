@@ -55,6 +55,8 @@ function markdownToHtml(md: string): string {
     // Bold / italic
     .replace(/\*\*(.+?)\*\*/g, '<strong class="text-gray-100 font-semibold">$1</strong>')
     .replace(/\*(.+?)\*/g, '<em class="text-gray-300 italic">$1</em>')
+    // Links
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-2">$1</a>')
     // Unordered list items
     .replace(/^\s*[-*]\s+(.+)$/gm, '<li class="ml-5 list-disc text-gray-400 text-sm leading-relaxed">$1</li>')
     // Ordered list items
