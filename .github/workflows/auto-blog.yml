@@ -2,8 +2,8 @@ name: Weekly Variable DC Power Supply Content Generator
 
 on:
   schedule:
-    # Every Monday at 02:00 UTC (10:00 Beijing time)
-    - cron: "0 2 * * 1"
+    # Every Wednesday at 02:00 UTC (10:00 Beijing time)
+    - cron: "0 2 * * 3"
   workflow_dispatch:
     # Allow manual trigger from GitHub Actions tab
 
@@ -30,20 +30,18 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: node scripts/auto-blog.js
 
-      - name: Commit and Push New Articles
+      - name: Commit and Push New Article
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Stage new articles and updated history
           git add content/variable-dc-power-supply/
 
-          # Only commit if there are actual changes
           if git diff --cached --quiet; then
-            echo "No new articles generated this run."
+            echo "No new article generated this run."
           else
             ARTICLE_COUNT=$(git diff --cached --name-only | grep -c '\.md$' || true)
-            git commit -m "content: auto-generate ${ARTICLE_COUNT} variable-dc-power-supply article(s) [$(date -u +%Y-%m-%d)]"
+            git commit -m "content: auto-publish ${ARTICLE_COUNT} variable-dc-power-supply article(s) [$(date -u +%Y-%m-%d)]"
             git push origin main
-            echo "Pushed ${ARTICLE_COUNT} new article(s) to main."
+            echo "Pushed ${ARTICLE_COUNT} new article(s)."
           fi
