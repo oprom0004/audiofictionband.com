@@ -1,5 +1,7 @@
 {
-  "rssTitles": [],
+  "rssTitles": [
+    "Isolated AC/DC Power Supply And Testing Station For 230 V Devices - Hackaday"
+  ],
   "usedKeywords": [
     "how to choose a variable DC power supply for laboratory use",
     "programmable DC power supply vs bench power supply differences",
@@ -314,7 +316,12 @@
       "slug": "variable-dc-power-supply-for-medical-device-testing-iso-60601",
       "date": "2027-05-02",
       "source": "pre-generated"
+    },
+    {
+      "slug": "isolated-acdc-power-supply-and-testing-station-for-230-v-devices-hackaday",
+      "date": "2026-06-24",
+      "source": "Google News — DC Power Supply"
     }
   ],
-  "rssSourceIndex": 0
+  "rssSourceIndex": 1
 }
