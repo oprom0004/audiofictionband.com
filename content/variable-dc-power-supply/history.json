@@ -1,6 +1,7 @@
 {
   "rssTitles": [
-    "Isolated AC/DC Power Supply And Testing Station For 230 V Devices - Hackaday"
+    "Isolated AC/DC Power Supply And Testing Station For 230 V Devices - Hackaday",
+    "SBS, Toshiba Start Tokyo EV Truck Trial With SCiB Batteries - International Business Times"
   ],
   "usedKeywords": [
     "how to choose a variable DC power supply for laboratory use",
@@ -321,7 +322,12 @@
       "slug": "isolated-acdc-power-supply-and-testing-station-for-230-v-devices-hackaday",
       "date": "2026-06-24",
       "source": "Google News — DC Power Supply"
+    },
+    {
+      "slug": "sbs-toshiba-start-tokyo-ev-truck-trial-with-scib-batteries-international-busines",
+      "date": "2026-07-01",
+      "source": "Google News — EV Battery Testing"
     }
   ],
-  "rssSourceIndex": 1
+  "rssSourceIndex": 2
 }
