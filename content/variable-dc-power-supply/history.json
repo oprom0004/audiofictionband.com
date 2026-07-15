@@ -1,7 +1,8 @@
 {
   "rssTitles": [
     "Isolated AC/DC Power Supply And Testing Station For 230 V Devices - Hackaday",
-    "SBS, Toshiba Start Tokyo EV Truck Trial With SCiB Batteries - International Business Times"
+    "SBS, Toshiba Start Tokyo EV Truck Trial With SCiB Batteries - International Business Times",
+    "Modos Flow &#8211; A 60Hz E-Ink Monitor Powered by AMD Zynq 7000 SoC"
   ],
   "usedKeywords": [
     "how to use SCPI commands to control a DC power supply"
@@ -281,7 +282,12 @@
       "slug": "how-to-use-scpi-commands-to-control-a-dc-power-supply",
       "date": "2026-07-08",
       "source": "keyword"
+    },
+    {
+      "slug": "modos-flow-8211-a-60hz-e-ink-monitor-powered-by-amd-zynq-7000-soc",
+      "date": "2026-07-15",
+      "source": "Electronics-Lab"
     }
   ],
-  "rssSourceIndex": 3
+  "rssSourceIndex": 4
 }
