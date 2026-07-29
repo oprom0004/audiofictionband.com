@@ -3,7 +3,8 @@
     "Isolated AC/DC Power Supply And Testing Station For 230 V Devices - Hackaday",
     "SBS, Toshiba Start Tokyo EV Truck Trial With SCiB Batteries - International Business Times",
     "Modos Flow &#8211; A 60Hz E-Ink Monitor Powered by AMD Zynq 7000 SoC",
-    "Inside Amperesand&#8217;s SST: A Conversation with CEO Brian Dow"
+    "Inside Amperesand&#8217;s SST: A Conversation with CEO Brian Dow",
+    "Novel and cost-efficient design of stand-alone PV system with simulation using PVsyst and experimental validation - Nature"
   ],
   "usedKeywords": [
     "how to use SCPI commands to control a DC power supply"
@@ -293,7 +294,12 @@
       "slug": "inside-amperesand8217s-sst-a-conversation-with-ceo-brian-dow",
       "date": "2026-07-22",
       "source": "Power Electronics News"
+    },
+    {
+      "slug": "novel-and-cost-efficient-design-of-stand-alone-pv-system-with-simulation-using-p",
+      "date": "2026-07-29",
+      "source": "Google News — Solar Inverter & MPPT"
     }
   ],
-  "rssSourceIndex": 5
+  "rssSourceIndex": 0
 }
