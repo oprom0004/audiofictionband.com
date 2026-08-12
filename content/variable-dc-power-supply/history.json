@@ -5,7 +5,8 @@
     "Modos Flow &#8211; A 60Hz E-Ink Monitor Powered by AMD Zynq 7000 SoC",
     "Inside Amperesand&#8217;s SST: A Conversation with CEO Brian Dow",
     "Novel and cost-efficient design of stand-alone PV system with simulation using PVsyst and experimental validation - Nature",
-    "Portable Bench Power Supply (1.25V–10V) in a Backpack - Hackster.io"
+    "Portable Bench Power Supply (1.25V–10V) in a Backpack - Hackster.io",
+    "Puget Sound’s vehicle-to-home charging pilot combines demand response, peak shaving, resilience - Utility Dive"
   ],
   "usedKeywords": [
     "how to use SCPI commands to control a DC power supply"
@@ -305,7 +306,12 @@
       "slug": "portable-bench-power-supply-125v10v-in-a-backpack-hacksterio",
       "date": "2026-08-05",
       "source": "Google News — DC Power Supply"
+    },
+    {
+      "slug": "puget-sounds-vehicle-to-home-charging-pilot-combines-demand-response-peak-shavin",
+      "date": "2026-08-12",
+      "source": "Google News — EV Battery Testing"
     }
   ],
-  "rssSourceIndex": 1
+  "rssSourceIndex": 2
 }
