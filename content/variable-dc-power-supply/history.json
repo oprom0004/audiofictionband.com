@@ -9,7 +9,8 @@
     "Puget Sound’s vehicle-to-home charging pilot combines demand response, peak shaving, resilience - Utility Dive"
   ],
   "usedKeywords": [
-    "how to use SCPI commands to control a DC power supply"
+    "how to use SCPI commands to control a DC power supply",
+    "variable DC power supply for photovoltaic research labs"
   ],
   "publishedArticles": [
     {
@@ -311,7 +312,12 @@
       "slug": "puget-sounds-vehicle-to-home-charging-pilot-combines-demand-response-peak-shavin",
       "date": "2026-08-12",
       "source": "Google News — EV Battery Testing"
+    },
+    {
+      "slug": "variable-dc-power-supply-for-photovoltaic-research-labs",
+      "date": "2026-08-26",
+      "source": "keyword"
     }
   ],
-  "rssSourceIndex": 2
+  "rssSourceIndex": 3
 }
