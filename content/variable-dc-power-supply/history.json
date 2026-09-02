@@ -10,7 +10,8 @@
   ],
   "usedKeywords": [
     "how to use SCPI commands to control a DC power supply",
-    "variable DC power supply for photovoltaic research labs"
+    "variable DC power supply for photovoltaic research labs",
+    "how to set overvoltage protection on a lab power supply"
   ],
   "publishedArticles": [
     {
@@ -317,7 +318,12 @@
       "slug": "variable-dc-power-supply-for-photovoltaic-research-labs",
       "date": "2026-08-26",
       "source": "keyword"
+    },
+    {
+      "slug": "how-to-set-overvoltage-protection-on-a-lab-power-supply",
+      "date": "2026-09-02",
+      "source": "keyword"
     }
   ],
-  "rssSourceIndex": 3
+  "rssSourceIndex": 4
 }
