@@ -7,7 +7,8 @@
     "Novel and cost-efficient design of stand-alone PV system with simulation using PVsyst and experimental validation - Nature",
     "Portable Bench Power Supply (1.25V–10V) in a Backpack - Hackster.io",
     "Puget Sound’s vehicle-to-home charging pilot combines demand response, peak shaving, resilience - Utility Dive",
-    "Designing a Peak Power-Shaving Solution for AI Server Applications"
+    "Designing a Peak Power-Shaving Solution for AI Server Applications",
+    "Performance analysis of MPPT techniques in a PV-powered water pumping system using an induction motor - Nature"
   ],
   "usedKeywords": [
     "how to use SCPI commands to control a DC power supply",
@@ -329,7 +330,12 @@
       "slug": "designing-a-peak-power-shaving-solution-for-ai-server-applications",
       "date": "2026-09-09",
       "source": "Power Electronics News"
+    },
+    {
+      "slug": "performance-analysis-of-mppt-techniques-in-a-pv-powered-water-pumping-system-usi",
+      "date": "2026-09-16",
+      "source": "Google News — Solar Inverter & MPPT"
     }
   ],
-  "rssSourceIndex": 5
+  "rssSourceIndex": 0
 }
