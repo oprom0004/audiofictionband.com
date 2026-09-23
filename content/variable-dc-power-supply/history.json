@@ -8,7 +8,8 @@
     "Portable Bench Power Supply (1.25V–10V) in a Backpack - Hackster.io",
     "Puget Sound’s vehicle-to-home charging pilot combines demand response, peak shaving, resilience - Utility Dive",
     "Designing a Peak Power-Shaving Solution for AI Server Applications",
-    "Performance analysis of MPPT techniques in a PV-powered water pumping system using an induction motor - Nature"
+    "Performance analysis of MPPT techniques in a PV-powered water pumping system using an induction motor - Nature",
+    "Klowra releases high quality fully isolated Vires slimline 6-Outlet Pedalboard Power Supply with 2 variable ports and 24V Output - Guitar Pedal X"
   ],
   "usedKeywords": [
     "how to use SCPI commands to control a DC power supply",
@@ -335,7 +336,12 @@
       "slug": "performance-analysis-of-mppt-techniques-in-a-pv-powered-water-pumping-system-usi",
       "date": "2026-09-16",
       "source": "Google News — Solar Inverter & MPPT"
+    },
+    {
+      "slug": "klowra-releases-high-quality-fully-isolated-vires-slimline-6-outlet-pedalboard-p",
+      "date": "2026-09-23",
+      "source": "Google News — DC Power Supply"
     }
   ],
-  "rssSourceIndex": 0
+  "rssSourceIndex": 1
 }
