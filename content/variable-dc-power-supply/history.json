@@ -10,7 +10,8 @@
     "Designing a Peak Power-Shaving Solution for AI Server Applications",
     "Performance analysis of MPPT techniques in a PV-powered water pumping system using an induction motor - Nature",
     "Klowra releases high quality fully isolated Vires slimline 6-Outlet Pedalboard Power Supply with 2 variable ports and 24V Output - Guitar Pedal X",
-    "High-resolution Dataset of Electric Vehicle Charging Responses Under Varied Power Quality Disturbances - Nature"
+    "High-resolution Dataset of Electric Vehicle Charging Responses Under Varied Power Quality Disturbances - Nature",
+    "EEVblog 1780 &#8211; Ledger Hardware Supply Chain Attack Examined"
   ],
   "usedKeywords": [
     "how to use SCPI commands to control a DC power supply",
@@ -347,7 +348,12 @@
       "slug": "high-resolution-dataset-of-electric-vehicle-charging-responses-under-varied-powe",
       "date": "2026-09-30",
       "source": "Google News — EV Battery Testing"
+    },
+    {
+      "slug": "eevblog-1780-8211-ledger-hardware-supply-chain-attack-examined",
+      "date": "2026-10-21",
+      "source": "EEVblog"
     }
   ],
-  "rssSourceIndex": 2
+  "rssSourceIndex": 3
 }
